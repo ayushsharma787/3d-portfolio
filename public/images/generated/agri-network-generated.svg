@@ -1,0 +1,31 @@
+<svg width="2048" height="1024" viewBox="0 0 2048 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#041325"/>
+      <stop offset="100%" stop-color="#0A1F4D"/>
+    </linearGradient>
+  </defs>
+  <rect width="2048" height="1024" fill="url(#night)"/>
+  <circle cx="1710" cy="676" r="242" stroke="#7EDBFF" stroke-width="3"/>
+  <ellipse cx="1710" cy="676" rx="242" ry="88" stroke="#7EDBFF" stroke-opacity="0.5"/>
+  <ellipse cx="1710" cy="676" rx="242" ry="168" stroke="#7EDBFF" stroke-opacity="0.35"/>
+  <rect x="988" y="434" width="258" height="168" rx="18" fill="#1A376A" stroke="#88F2FF" stroke-width="3"/>
+  <text x="1040" y="520" fill="#D0FCFF" font-size="42" font-family="Arial">AGRITECH</text>
+  <g stroke="#8DEAFF" stroke-width="3" fill="#1A305E88">
+    <polygon points="350,400 436,450 436,550 350,600 264,550 264,450"/>
+    <polygon points="570,510 656,560 656,660 570,710 484,660 484,560"/>
+    <polygon points="792,442 878,492 878,592 792,642 706,592 706,492"/>
+    <polygon points="905,615 991,665 991,765 905,815 819,765 819,665"/>
+    <polygon points="1158,722 1244,772 1244,872 1158,922 1072,872 1072,772"/>
+    <polygon points="1460,352 1546,402 1546,502 1460,552 1374,502 1374,402"/>
+  </g>
+  <g stroke="#87E6FF" stroke-opacity="0.7" stroke-width="2">
+    <line x1="1117" y1="518" x2="350" y2="500"/>
+    <line x1="1117" y1="518" x2="570" y2="610"/>
+    <line x1="1117" y1="518" x2="792" y2="542"/>
+    <line x1="1117" y1="518" x2="905" y2="715"/>
+    <line x1="1117" y1="518" x2="1158" y2="822"/>
+    <line x1="1117" y1="518" x2="1460" y2="452"/>
+    <line x1="1246" y1="518" x2="1510" y2="640"/>
+  </g>
+</svg>

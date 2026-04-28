@@ -1,0 +1,26 @@
+<svg width="1366" height="768" viewBox="0 0 1366 768" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5D8C98"/>
+      <stop offset="100%" stop-color="#243746"/>
+    </linearGradient>
+    <linearGradient id="tube" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#a9f7ff" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#73dbe7" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <rect width="1366" height="768" fill="url(#bg)"/>
+  <rect x="535" y="90" width="296" height="580" rx="120" fill="url(#tube)" stroke="#9ef3ff" stroke-width="4"/>
+  <ellipse cx="683" cy="110" rx="88" ry="22" stroke="#c8fbff" stroke-width="3"/>
+  <ellipse cx="683" cy="648" rx="88" ry="22" stroke="#c8fbff" stroke-width="3"/>
+  <path d="M680 530C670 500 648 470 635 430" stroke="#5ef0cf" stroke-width="5"/>
+  <path d="M635 430C594 401 560 369 534 332" stroke="#60f9d4" stroke-width="3"/>
+  <path d="M635 430C680 405 718 369 744 320" stroke="#60f9d4" stroke-width="3"/>
+  <polygon points="560,372 508,336 548,322" fill="#66dfff" fill-opacity="0.55" stroke="#7affd9"/>
+  <polygon points="712,350 780,318 742,296" fill="#66dfff" fill-opacity="0.55" stroke="#7affd9"/>
+  <rect x="165" y="172" width="325" height="190" rx="20" fill="#89e8ff20" stroke="#9ff7ff"/>
+  <rect x="192" y="398" width="282" height="152" rx="20" fill="#89e8ff20" stroke="#9ff7ff"/>
+  <rect x="848" y="282" width="340" height="205" rx="20" fill="#89e8ff20" stroke="#9ff7ff"/>
+  <path d="M1020 138L1215 240L1122 322" stroke="#d9fbff" stroke-width="15" stroke-linecap="round"/>
+  <circle cx="1160" cy="242" r="30" fill="#bdefff" fill-opacity="0.4"/>
+</svg>
