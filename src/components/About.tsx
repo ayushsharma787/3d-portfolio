@@ -15,10 +15,13 @@ const About = () => {
           depend on agriculture for a ~15% slice of GDP, and roughly half of small
           and marginal farmers cannot borrow from any formal source. Satyukt is
           not here to grow more rice. It is here to make farmers legible to
-          capital. It is not yet a platform — the flywheel hasn&apos;t started
-          spinning, and going global isn&apos;t flipping a switch; it means
-          rebuilding the institutional scaffolding country by country. This is
-          not a satellite company. It is trust infrastructure for agri-finance.
+          capital. Without that rail, the same farmer borrows from a moneylender
+          at 24%+; the counterfactual to algorithmic inclusion isn&apos;t farmer
+          empowerment, it is total exclusion. It is not yet a platform — the
+          flywheel hasn&apos;t started spinning, and going global isn&apos;t
+          flipping a switch; it means rebuilding the institutional scaffolding
+          country by country. This is not a satellite company. It is trust
+          infrastructure for agri-finance.
         </p>
       </div>
     </div>

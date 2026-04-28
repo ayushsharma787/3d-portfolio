@@ -65,8 +65,10 @@ const Contact = () => {
               The Strategy <br /> is to <span>deepen</span>
             </h2>
             <p>
-              Bundle credit, insurance and advisory in India before exporting the
-              model. Going global isn&apos;t flipping a switch.
+              Priority 1: bundle credit, insurance and advisory in India —
+              monetize the infrastructure already built. Priority 2: expand to
+              analog markets (Bangladesh, Kenya, Indonesia) with state-backed
+              insurance. Reject the non-agri quadrants; they abandon the moat.
             </p>
             <h5>
               <MdCopyright /> 2026 — A Strategic Analysis

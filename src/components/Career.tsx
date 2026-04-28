@@ -24,7 +24,11 @@ const Career = () => {
               The next step follows the logic of the last three: bundle credit,
               insurance and advisory into a continuous relationship. Stop selling
               point analyses; become the rail that institutions trust to underwrite
-              smallholder agriculture at scale. Highest value capture.
+              smallholder agriculture at scale. Highest value capture — and the
+              hardest problem to keep clean. The risk isn&apos;t power transfer;
+              it is opacity. Who audits the model? What happens if a satellite
+              glitch depresses a yield estimate, or a credit score? Trust
+              infrastructure stands or falls on model governance.
             </p>
           </div>
           <div className="career-info-box">
