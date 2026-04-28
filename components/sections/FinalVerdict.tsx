@@ -5,6 +5,7 @@ import { ArrowUp } from "lucide-react";
 import { finalVerdict } from "@/lib/content";
 import SectionLabel from "@/components/ui/SectionLabel";
 import { useDoorChoice } from "@/components/ui/DoorChoice";
+import { VelocityMarquee } from "@/components/ui/Cinematic";
 
 export default function FinalVerdict() {
   const { choice } = useDoorChoice();
@@ -25,6 +26,17 @@ export default function FinalVerdict() {
       id="verdict"
       className="pattern-iso-faint relative flex min-h-screen flex-col justify-center overflow-hidden py-32 md:py-40"
     >
+      <div
+        aria-hidden
+        className="absolute -top-2 left-0 right-0 z-10 border-y border-navy/10 bg-cream/60 py-4 font-serif text-3xl italic text-navy backdrop-blur md:text-5xl"
+      >
+        <VelocityMarquee baseVelocity={2}>
+          <span className="mx-6">Trust Infrastructure</span>
+          <span className="mx-6 text-deepGreen">·</span>
+          <span className="mx-6">Trust Infrastructure</span>
+          <span className="mx-6 text-deepGreen">·</span>
+        </VelocityMarquee>
+      </div>
       <div className="mx-auto w-full max-w-6xl px-6">
         <SectionLabel index={14}>The Final Verdict</SectionLabel>
 

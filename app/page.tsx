@@ -16,7 +16,7 @@ import FinalVerdict from "@/components/sections/FinalVerdict";
 import SmoothScroll from "@/components/ui/SmoothScroll";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import ScrollBar from "@/components/ui/ScrollBar";
-import { MagneticCursor } from "@/components/ui/Scroll";
+import { HoverCursor, BackgroundStage } from "@/components/ui/Cinematic";
 import { DoorChoiceProvider } from "@/components/ui/DoorChoice";
 
 export default function Page() {
@@ -25,7 +25,26 @@ export default function Page() {
       <SmoothScroll />
       <ScrollBar />
       <ScrollProgress />
-      <MagneticCursor />
+      <HoverCursor />
+      <BackgroundStage
+        stops={[
+          "#F5F1E8", // hero
+          "#F0E9DB", // opening
+          "#F5F1E8", // surface
+          "#EFE7D6", // domain
+          "#F0EBDD", // moat
+          "#E8F2F7", // platform
+          "#F0E9DB", // national
+          "#F5F1E8", // value
+          "#FAFAF7", // vision
+          "#F0E9DB", // evolution
+          "#E8F2F7", // synthesis
+          "#F5F1E8", // inclusion
+          "#0F1E3D", // governance
+          "#F5F1E8", // quadrant
+          "#FAFAF7", // verdict
+        ]}
+      />
       <main className="relative">
         <Hero />
         <OpeningQuestion />
