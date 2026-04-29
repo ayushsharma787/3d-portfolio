@@ -17,12 +17,12 @@ export default function SectionLabel({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-20%" }}
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className={`flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.25em] ${
+      className={`flex items-center gap-4 text-base md:text-lg font-semibold uppercase tracking-[0.18em] ${
         tone === "navy" ? "text-navy/60" : "text-cream/70"
       }`}
     >
       <span>{String(index).padStart(2, "0")}</span>
-      <span className={`h-px w-8 ${tone === "navy" ? "bg-navy/30" : "bg-cream/30"}`} />
+      <span className={`h-[2px] w-12 ${tone === "navy" ? "bg-navy/30" : "bg-cream/30"}`} />
       <span>{children}</span>
     </motion.div>
   );
