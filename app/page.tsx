@@ -16,11 +16,13 @@ import SmoothScroll from "@/components/ui/SmoothScroll";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import ScrollBar from "@/components/ui/ScrollBar";
 import { HoverCursor, BackgroundStage } from "@/components/ui/Cinematic";
+import FabricWorld from "@/components/ui/FabricWorld";
 
 export default function Page() {
   return (
     <>
       <SmoothScroll />
+      <FabricWorld />
       <ScrollBar />
       <ScrollProgress />
       <HoverCursor />
