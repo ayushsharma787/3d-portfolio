@@ -12,7 +12,7 @@ import RaymondMark from "./RaymondMark";
  */
 export default function CinematicExperience() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const sceneRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const sceneRefs = useRef<(HTMLElement | null)[]>([]);
   const progressBarRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -104,7 +104,7 @@ export default function CinematicExperience() {
     };
     raf = requestAnimationFrame(render);
 
-    const scenesEls = sceneRefs.current.filter(Boolean) as HTMLDivElement[];
+    const scenesEls = sceneRefs.current.filter(Boolean) as HTMLElement[];
     const sceneCount = scenesEls.length;
 
     const updateScenes = () => {
