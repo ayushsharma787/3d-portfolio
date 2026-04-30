@@ -136,10 +136,10 @@ export function MaskText({
             className="inline-block"
             initial={{ y: "110%" }}
             whileInView={{ y: "0%" }}
-            viewport={{ once: true, margin: "-10%" }}
+            viewport={{ once: true, amount: 0 }}
             transition={{
-              duration: 0.9,
-              delay: delay + i * (splitBy === "word" ? 0.06 : 0.02),
+              duration: 0.7,
+              delay: delay + i * (splitBy === "word" ? 0.04 : 0.015),
               ease: [0.16, 1, 0.3, 1],
             }}
           >

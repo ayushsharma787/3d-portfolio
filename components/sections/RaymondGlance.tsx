@@ -21,15 +21,15 @@ export default function RaymondGlance() {
 
       <div className="relative mx-auto max-w-7xl px-6">
         <Reveal>
-          <div className="eyebrow mb-2 text-navy/60">{glance.eyebrow}</div>
+          <div className="eyebrow mb-1 text-navy/60">{glance.eyebrow}</div>
         </Reveal>
 
-        <h2 className="font-serif text-[3.4rem] leading-[0.95] text-navy md:text-8xl lg:text-[8.5rem] font-extrabold tracking-[-0.02em]">
+        <h2 className="font-serif text-[2.8rem] leading-[0.95] text-navy md:text-[5.5rem] lg:text-[7rem] font-extrabold tracking-[-0.02em]">
           <MaskText text={glance.title} />
         </h2>
 
         {/* Timeline */}
-        <div className="relative mt-28">
+        <div className="relative mt-8">
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}

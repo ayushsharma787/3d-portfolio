@@ -64,14 +64,14 @@ export default function StructuralFlaw() {
 
       <div className="relative mx-auto max-w-7xl px-6">
         <Reveal>
-          <div className="eyebrow mb-2 text-navy/60">{flaw.eyebrow}</div>
+          <div className="eyebrow mb-1 text-navy/60">{flaw.eyebrow}</div>
         </Reveal>
 
-        <h2 className="font-serif text-[3.4rem] leading-[0.95] text-navy md:text-8xl lg:text-[8.5rem] font-extrabold tracking-[-0.02em]">
+        <h2 className="font-serif text-[2.8rem] leading-[0.95] text-navy md:text-[5.5rem] lg:text-[7rem] font-extrabold tracking-[-0.02em]">
           <MaskText text="The Structural Flaw — The Pipeline That Breaks at the Point of Sale." />
         </h2>
 
-        <div className="relative mt-24" style={{ perspective: 1400 }}>
+        <div className="relative mt-8" style={{ perspective: 1400 }}>
           {/* Pipeline rail (left half = controlled) */}
           <motion.div
             initial={{ scaleX: 0 }}

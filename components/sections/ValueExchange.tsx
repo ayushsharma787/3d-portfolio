@@ -83,10 +83,10 @@ export default function ValueExchange() {
 
       <div className="relative mx-auto max-w-7xl px-6">
         <Reveal>
-          <div className="eyebrow mb-2 text-navy/60">{exchange.eyebrow}</div>
+          <div className="eyebrow mb-1 text-navy/60">{exchange.eyebrow}</div>
         </Reveal>
 
-        <h2 className="mb-6 font-serif text-[3.4rem] leading-[0.95] text-navy md:text-8xl lg:text-[8.5rem] font-extrabold tracking-[-0.02em]">
+        <h2 className="mb-3 font-serif text-[2.8rem] leading-[0.95] text-navy md:text-[5.5rem] lg:text-[7rem] font-extrabold tracking-[-0.02em]">
           <MaskText text="The Value Exchange — A Moat That Gets Deeper Every Day." />
         </h2>
 
