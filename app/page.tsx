@@ -1,3 +1,20 @@
+"use client";
+
+import { useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// --- NEW GLOBAL UI & PHYSICS ENGINES ---
+import SmoothScroll from "@/components/ui/SmoothScroll";
+import CustomCursor from "@/components/ui/CustomCursor";
+import FabricBackground from "@/components/ui/FabricBackground";
+
+// --- YOUR EXISTING UI HELPERS ---
+import ScrollProgress from "@/components/ui/ScrollProgress";
+import ScrollBar from "@/components/ui/ScrollBar";
+import { BackgroundStage } from "@/components/ui/Cinematic";
+
+// --- ALL 14 SECTIONS ---
 import Hero from "@/components/sections/Hero";
 import RaymondGlance from "@/components/sections/RaymondGlance";
 import MacroDisconnect from "@/components/sections/MacroDisconnect";
@@ -19,6 +36,11 @@ import ClothBackground from "@/components/ui/ClothBackground";
 import Preloader from "@/components/ui/Preloader";
 
 export default function Page() {
+  useEffect(() => {
+    // Register GSAP globally on client-side load
+    gsap.registerPlugin(ScrollTrigger);
+  }, []);
+
   return (
     <>
       <Preloader />
@@ -43,6 +65,6 @@ export default function Page() {
         <UnfairAdvantage />
         <Closing />
       </main>
-    </>
+    </SmoothScroll>
   );
 }
