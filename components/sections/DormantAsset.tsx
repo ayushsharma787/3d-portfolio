@@ -22,7 +22,7 @@ export default function DormantAsset() {
   return (
     <section
       id="dormant"
-      className="section-pane dark relative isolate w-full overflow-hidden py-16 text-cream"
+      className="section-pane dark relative isolate min-h-screen w-full overflow-hidden py-28 text-cream"
     >
       <div className="pointer-events-none absolute inset-0 pattern-grid-on-navy opacity-50" />
 
@@ -144,7 +144,7 @@ function NetworkViz({
         {/* embroidery */}
         <div className="pointer-events-none absolute inset-0 opacity-30 mix-blend-screen"
              style={{
-               background: "radial-gradient(circle at 30% 30%, rgba(201,169,97,0.25) 0, transparent 40%), radial-gradient(circle at 70% 70%, rgba(20,20,20,0.18) 0, transparent 35%)"
+               background: "radial-gradient(circle at 30% 30%, rgba(201,169,97,0.25) 0, transparent 40%), radial-gradient(circle at 70% 70%, rgba(45,212,224,0.18) 0, transparent 35%)"
              }}
         />
 
@@ -275,7 +275,7 @@ function DataPacket({ a, b, delay }: { a: Node; b: Node; delay: number }) {
   return (
     <motion.circle
       r="0.7"
-      fill="#141414"
+      fill="#2DD4E0"
       initial={{ cx: a.x, cy: a.y, opacity: 0 }}
       animate={{
         cx: [a.x, b.x],

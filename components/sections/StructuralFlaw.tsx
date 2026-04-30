@@ -7,10 +7,8 @@ import { MaskText } from "@/components/ui/Cinematic";
 import { Reveal } from "@/components/ui/Scroll";
 
 /**
- * The Structural Flaw — editorial, monochrome rebuild.
- * Left half: a tight, controlled, numbered pipeline (BLACK).
- * Center: a violent fracture at Point of Sale (RED accent).
- * Right half: post-break identity touchpoints, drifting apart (OUTLINED, ink).
+ * The Structural Flaw — denim-textured pipeline that TEARS at point-of-sale.
+ * Particle/thread explosion at the break, post-break icons drift apart.
  */
 export default function StructuralFlaw() {
   const ref = useRef<HTMLDivElement>(null);
@@ -18,38 +16,38 @@ export default function StructuralFlaw() {
     target: ref,
     offset: ["start end", "end start"],
   });
+  // tear progresses as section enters mid-viewport
   const tearProgress = useTransform(scrollYProgress, [0.25, 0.55], [0, 1]);
-  const ghostX = useTransform(scrollYProgress, [0, 1], [-80, 80]);
 
+  // pre-computed shrapnel offsets
   const shards = useMemo(
     () =>
-      Array.from({ length: 22 }).map((_, i) => {
-        const a = (i / 22) * Math.PI * 2;
+      Array.from({ length: 18 }).map((_, i) => {
+        const a = (i / 18) * Math.PI * 2;
         return {
-          dx: Math.cos(a) * (60 + (i % 4) * 22),
-          dy: Math.sin(a) * (40 + (i % 3) * 20),
+          dx: Math.cos(a) * (60 + (i % 4) * 20),
+          dy: Math.sin(a) * (40 + (i % 3) * 18),
           rot: (i % 2 ? 1 : -1) * (20 + i * 4),
-          delay: 0.9 + i * 0.022,
-          size: 5 + (i % 4) * 3,
-          // Strict mono palette: ink + a single red accent
-          color: i % 5 === 0 ? "#d4202b" : i % 2 === 0 ? "#141414" : "#3a3a3a",
+          delay: 0.9 + i * 0.025,
+          size: 6 + (i % 4) * 3,
+          color: i % 3 === 0 ? "#C9A961" : i % 3 === 1 ? "#0A1F3D" : "#E2CE9C",
         };
       }),
     []
   );
   const threads = useMemo(
     () =>
-      Array.from({ length: 16 }).map((_, i) => {
-        const a = (i / 16) * Math.PI * 2 + 0.2;
+      Array.from({ length: 14 }).map((_, i) => {
+        const a = (i / 14) * Math.PI * 2 + 0.2;
         const r1 = 30 + (i % 3) * 10;
-        const r2 = r1 + 60 + (i % 4) * 22;
+        const r2 = r1 + 60 + (i % 4) * 20;
         return {
           x1: 100 + Math.cos(a) * r1,
           y1: 100 + Math.sin(a) * r1,
           x2: 100 + Math.cos(a) * r2,
           y2: 100 + Math.sin(a) * r2,
           delay: 1.0 + i * 0.04,
-          color: i % 4 === 0 ? "#d4202b" : "#141414",
+          color: i % 2 ? "#C9A961" : "#0A1F3D",
         };
       }),
     []
@@ -59,150 +57,92 @@ export default function StructuralFlaw() {
     <section
       ref={ref}
       id="flaw"
-      className="relative isolate w-full overflow-hidden bg-[#fdf8ee] py-32 text-[#141414]"
+      className="section-pane relative isolate min-h-screen w-full overflow-hidden py-28"
     >
-      {/* Giant ghost numeral parallax */}
-      <motion.div
-        style={{ x: ghostX }}
-        className="pointer-events-none absolute -right-10 top-10 select-none font-serif text-[26vw] font-black leading-none text-[#141414]/[0.04]"
-        aria-hidden
-      >
-        03
-      </motion.div>
+      {/* denim cross-hatch overlay */}
+      <div className="pointer-events-none absolute inset-0 pattern-denim opacity-40" />
 
-      {/* Subtle grid backdrop */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.06]"
-        style={{
-          backgroundImage:
-            "linear-gradient(#141414 1px, transparent 1px), linear-gradient(90deg, #141414 1px, transparent 1px)",
-          backgroundSize: "64px 64px",
-        }}
-        aria-hidden
-      />
+      <div className="relative mx-auto max-w-7xl px-6">
+        <Reveal>
+          <div className="eyebrow mb-3 text-navy/60">{flaw.eyebrow}</div>
+        </Reveal>
 
-      <div className="relative mx-auto max-w-[1320px] px-6 md:px-10">
-        {/* Header strip — editorial 12-col asymmetric */}
-        <div className="grid grid-cols-12 items-end gap-6">
-          <div className="col-span-12 md:col-span-3">
-            <Reveal>
-              <div className="text-[11px] font-bold uppercase tracking-[0.4em] text-[#141414]/60">
-                {flaw.eyebrow}
-              </div>
-            </Reveal>
-            <div className="mt-3 h-[2px] w-16 bg-[#141414]" />
-          </div>
-          <h2 className="col-span-12 font-serif text-[clamp(40px,7.5vw,116px)] font-extrabold leading-[0.95] tracking-[-0.02em] text-[#141414] md:col-span-9">
-            <MaskText text="The pipeline that breaks at the point of sale." />
-          </h2>
-        </div>
+        <h2 className="font-serif text-[2.6rem] leading-[1.02] text-navy md:text-7xl lg:text-[6rem]">
+          <MaskText text="The Structural Flaw — The Pipeline That Breaks at the Point of Sale." />
+        </h2>
 
-        {/* Section sub-heads, two columns of context labels */}
-        <div className="mt-14 grid grid-cols-12 gap-6 border-y border-[#141414]/15 py-4 text-[11px] font-semibold uppercase tracking-[0.32em] text-[#141414]/55">
-          <div className="col-span-6">A · Controlled</div>
-          <div className="col-span-6 text-right">B · Released → Lost</div>
-        </div>
-
-        {/* Pipeline */}
-        <div className="relative mt-16" style={{ perspective: 1400 }}>
-          {/* Long ink rail across the controlled half */}
+        <div className="relative mt-24" style={{ perspective: 1400 }}>
+          {/* Pipeline rail (left half = controlled) */}
           <motion.div
             initial={{ scaleX: 0 }}
             whileInView={{ scaleX: 1 }}
             viewport={{ once: true, margin: "-15%" }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             style={{ transformOrigin: "0% 50%" }}
-            className="absolute left-0 right-1/2 top-1/2 h-[3px] -translate-y-1/2 bg-[#141414]"
-            aria-hidden
-          />
-          {/* Dashed fracture rail across the released half */}
-          <motion.div
-            initial={{ scaleX: 0 }}
-            whileInView={{ scaleX: 1 }}
-            viewport={{ once: true, margin: "-15%" }}
-            transition={{ duration: 1.2, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            style={{
-              transformOrigin: "0% 50%",
-              backgroundImage:
-                "repeating-linear-gradient(90deg, #141414 0 8px, transparent 8px 16px)",
-            }}
-            className="absolute left-1/2 right-0 top-1/2 h-[3px] -translate-y-1/2 opacity-60"
-            aria-hidden
+            className="absolute left-0 right-1/2 top-1/2 h-[6px] -translate-y-1/2 rounded-full gold-thread"
           />
 
-          <div className="relative grid grid-cols-1 items-center gap-10 md:grid-cols-[1fr_auto_1fr] md:gap-6">
-            {/* PRE — controlled cards, tight industrial */}
+          <div className="relative grid grid-cols-1 gap-10 md:grid-cols-[1fr_auto_1fr] md:items-center md:gap-6">
+            {/* PRE — controlled boxes, factory-line pop */}
             <div className="grid grid-cols-3 gap-3 md:gap-5">
               {flaw.pre.map((p, i) => (
                 <motion.div
                   key={p}
-                  initial={{ opacity: 0, y: 32, rotateX: 14 }}
-                  whileInView={{ opacity: 1, y: 0, rotateX: 0 }}
+                  initial={{ opacity: 0, y: 30, rotateY: -25, z: -40 }}
+                  whileInView={{ opacity: 1, y: 0, rotateY: 0, z: 0 }}
                   viewport={{ once: true, margin: "-15%" }}
                   transition={{
                     delay: 0.4 + i * 0.18,
                     duration: 0.9,
                     ease: [0.16, 1, 0.3, 1],
                   }}
-                  className="group relative aspect-[4/5] border-2 border-[#141414] bg-white"
+                  className="relative aspect-square rounded-md border-[3px] border-navy bg-cream shadow-[0_20px_30px_-20px_rgba(10,31,61,0.5)]"
                   style={{ transformStyle: "preserve-3d" }}
                 >
-                  {/* Step number */}
-                  <div className="absolute left-3 top-3 font-serif text-[11px] font-bold tracking-[0.3em] text-[#141414]/60">
-                    0{i + 1}
+                  <div className="absolute inset-0 pattern-denim opacity-30" />
+                  <div className="absolute inset-0 flex items-center justify-center p-2 text-center text-[11px] font-semibold uppercase tracking-wide text-navy md:text-xs">
+                    {p}
                   </div>
-                  {/* Inner pinstripe */}
-                  <div
-                    className="absolute inset-2 opacity-[0.08]"
-                    style={{
-                      backgroundImage:
-                        "repeating-linear-gradient(90deg, #141414 0 1px, transparent 1px 8px)",
-                    }}
-                  />
-                  {/* Label */}
-                  <div className="absolute inset-0 flex items-end p-3">
-                    <div className="font-serif text-[14px] font-bold leading-tight text-[#141414] md:text-[16px]">
-                      {p}
-                    </div>
-                  </div>
-                  {/* Bottom pulse bar */}
-                  <motion.span
-                    initial={{ scaleX: 0 }}
-                    whileInView={{ scaleX: 1 }}
-                    viewport={{ once: true, margin: "-15%" }}
-                    transition={{ delay: 0.7 + i * 0.18, duration: 0.6 }}
-                    style={{ transformOrigin: "0% 50%" }}
-                    className="absolute inset-x-2 bottom-2 h-[2px] bg-[#141414]"
-                  />
+                  {[
+                    [3, 3],
+                    [3, "calc(100% - 11px)"],
+                    ["calc(100% - 11px)", 3],
+                    ["calc(100% - 11px)", "calc(100% - 11px)"],
+                  ].map(([t, l], k) => (
+                    <span
+                      key={k}
+                      style={{ top: t as string, left: l as string }}
+                      className="absolute h-2 w-2 rounded-full bg-navy"
+                    />
+                  ))}
                 </motion.div>
               ))}
             </div>
 
-            {/* TEAR — fracture point */}
-            <div className="relative h-56 w-full md:h-64 md:w-56">
+            {/* TEAR — fabric ripping with shrapnel + threads */}
+            <div className="relative h-44 w-full md:h-56 md:w-44">
               <svg viewBox="0 0 200 200" className="h-full w-full overflow-visible">
-                {/* solid ink slab (controlled side terminator) */}
+                {/* fabric body */}
                 <motion.path
                   d="M40 60 L160 60 L160 140 L40 140 Z"
-                  fill="#141414"
-                  initial={{ scaleY: 0.96 }}
-                  whileInView={{ scaleY: 1 }}
+                  fill="#0A1F3D"
+                  initial={{ scale: 1 }}
+                  whileInView={{ scale: 1.02 }}
                   viewport={{ once: true, margin: "-15%" }}
                   transition={{ duration: 0.4, delay: 0.7 }}
-                  style={{ transformOrigin: "100px 100px" }}
                 />
-                {/* jagged red tear */}
+                {/* tear gap */}
                 <motion.path
-                  d="M100 30 L92 70 L108 95 L88 120 L112 160 L100 185"
-                  stroke="#d4202b"
-                  strokeWidth="3"
+                  d="M100 40 L94 80 L106 100 L92 120 L108 160 L100 180"
+                  stroke="#C9A961"
+                  strokeWidth="2"
                   fill="none"
                   initial={{ pathLength: 0 }}
                   whileInView={{ pathLength: 1 }}
                   viewport={{ once: true, margin: "-15%" }}
                   transition={{ duration: 1, delay: 0.8 }}
                 />
-                {/* shrapnel — black + sparing red */}
+                {/* shrapnel */}
                 {shards.map((s, i) => (
                   <motion.rect
                     key={i}
@@ -215,7 +155,7 @@ export default function StructuralFlaw() {
                     whileInView={{
                       x: 98 + s.dx,
                       y: 98 + s.dy,
-                      opacity: [0, 1, 0.85],
+                      opacity: [0, 1, 0],
                       rotate: s.rot,
                     }}
                     viewport={{ once: true, margin: "-15%" }}
@@ -226,7 +166,7 @@ export default function StructuralFlaw() {
                     }}
                   />
                 ))}
-                {/* radiating threads */}
+                {/* loose threads radiating */}
                 {threads.map((t, i) => (
                   <motion.line
                     key={i}
@@ -244,14 +184,14 @@ export default function StructuralFlaw() {
                     transition={{ duration: 0.8, delay: t.delay }}
                   />
                 ))}
-                {/* central red flash */}
+                {/* central spark */}
                 <motion.circle
                   cx="100"
                   cy="100"
                   r="6"
-                  fill="#d4202b"
+                  fill="#C9A961"
                   initial={{ scale: 0 }}
-                  whileInView={{ scale: [0, 2.4, 0] }}
+                  whileInView={{ scale: [0, 2, 0] }}
                   viewport={{ once: true, margin: "-15%" }}
                   transition={{ duration: 0.9, delay: 0.85 }}
                 />
@@ -259,79 +199,52 @@ export default function StructuralFlaw() {
 
               <motion.div
                 style={{ opacity: tearProgress }}
-                className="pointer-events-none absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.4em] text-[#d4202b]"
+                className="pointer-events-none absolute -bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap text-[10px] font-bold uppercase tracking-[0.3em] text-cyan-deep"
               >
                 Point of Sale · Break
               </motion.div>
             </div>
 
-            {/* POST — drifted, outlined identity touchpoints */}
+            {/* POST — disconnected icons, drift apart */}
             <div className="grid grid-cols-3 gap-3 md:gap-5">
               {flaw.post.map((p, i) => (
                 <motion.div
                   key={p}
-                  initial={{ opacity: 0, x: 40, y: 30, rotate: -3 }}
-                  whileInView={{
-                    opacity: 1,
-                    x: 0,
-                    y: 0,
-                    rotate: i === 0 ? -2 : i === 1 ? 1.5 : -1,
-                  }}
+                  initial={{ opacity: 0, x: 30, y: 30 }}
+                  whileInView={{ opacity: 1, x: 0, y: 0 }}
                   viewport={{ once: true, margin: "-15%" }}
                   transition={{
                     delay: 1.6 + i * 0.18,
                     duration: 0.9,
                     ease: [0.16, 1, 0.3, 1],
                   }}
-                  whileHover={{ scale: 1.04, rotate: 0 }}
-                  className="flex flex-col items-center justify-center gap-3 rounded-none border border-[#141414]/30 bg-white/70 p-4 backdrop-blur-sm"
+                  className="flex flex-col items-center justify-center gap-2 drift"
+                  style={{ animationDelay: `${i * 0.4}s` }}
                 >
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#141414] bg-white text-[#141414]">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-cyan/70 bg-cyan-light/20 text-cyan-deep shadow-[0_0_30px_-5px_rgba(45,212,224,0.4)]">
                     <PostIcon kind={p} />
                   </div>
-                  <div className="text-[11px] font-bold uppercase tracking-[0.32em] text-[#141414] md:text-xs">
+                  <div className="text-xs font-semibold uppercase tracking-wide text-cyan-deep md:text-sm">
                     {p}
-                  </div>
-                  <div className="h-px w-6 bg-[#141414]/30" />
-                  <div className="text-[10px] uppercase tracking-[0.3em] text-[#141414]/50">
-                    Untracked
                   </div>
                 </motion.div>
               ))}
             </div>
           </div>
 
-          {/* Captions — strict mono with one red rule */}
-          <div className="mt-20 grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-16">
+          {/* Captions */}
+          <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-12">
             <Reveal delay={0.2}>
-              <div className="relative pl-6">
-                <span className="absolute left-0 top-0 h-full w-[3px] bg-[#141414]" />
-                <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.4em] text-[#141414]/60">
-                  Inside the wall
-                </div>
-                <p className="font-serif text-[20px] leading-[1.35] text-[#141414] md:text-[26px]">
-                  {flaw.preCaption}
-                </p>
-              </div>
+              <p className="border-l-2 border-navy pl-4 text-sm leading-relaxed text-ink md:text-base">
+                <span className="font-semibold text-navy">{flaw.preCaption}</span>
+              </p>
             </Reveal>
             <Reveal delay={0.4}>
-              <div className="relative pl-6">
-                <span className="absolute left-0 top-0 h-full w-[3px] bg-[#d4202b]" />
-                <div className="mb-2 text-[10px] font-bold uppercase tracking-[0.4em] text-[#d4202b]">
-                  After the break
-                </div>
-                <p className="font-serif text-[20px] leading-[1.35] text-[#141414] md:text-[26px]">
-                  {flaw.postCaption}
-                </p>
-              </div>
+              <p className="border-l-2 border-cyan pl-4 text-sm leading-relaxed text-ink md:text-base">
+                <span className="font-semibold text-cyan-deep">{flaw.postCaption}</span>
+              </p>
             </Reveal>
           </div>
-        </div>
-
-        {/* Footer marker */}
-        <div className="mt-16 flex items-center justify-between border-t border-[#141414]/15 pt-4 text-[10px] font-bold uppercase tracking-[0.4em] text-[#141414]/45">
-          <span>04 · The Blind Spot</span>
-          <span>↓ continue</span>
         </div>
       </div>
     </section>

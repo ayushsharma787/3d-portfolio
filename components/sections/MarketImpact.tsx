@@ -15,7 +15,7 @@ const SECTOR_COLORS: Record<string, string> = {
 const SECTOR_ACCENT: Record<string, string> = {
   "Asymmetry of Timing":  "#C9A961",
   "Formalization Squeeze":"#0A1F3D",
-  "Consolidation":        "#141414",
+  "Consolidation":        "#2DD4E0",
   "Capability Gap":       "#E2CE9C",
 };
 
@@ -23,13 +23,13 @@ export default function MarketImpact() {
   return (
     <section
       id="impact"
-      className="section-pane relative isolate w-full overflow-hidden py-16"
+      className="section-pane relative isolate min-h-screen w-full overflow-hidden py-28"
     >
       <div className="relative mx-auto max-w-7xl px-6">
         <Reveal>
-          <div className="eyebrow mb-2 text-navy/60">{impact.eyebrow}</div>
+          <div className="eyebrow mb-3 text-navy/60">{impact.eyebrow}</div>
         </Reveal>
-        <h2 className="mb-6 font-serif text-[3.4rem] leading-[0.95] text-navy md:text-8xl lg:text-[8.5rem] font-extrabold tracking-[-0.02em]">
+        <h2 className="mb-16 font-serif text-[2.6rem] leading-[1.02] text-navy md:text-7xl lg:text-[6rem]">
           <MaskText text="The Market Impact — Who Gets Disrupted, and How." />
         </h2>
 

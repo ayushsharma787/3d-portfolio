@@ -15,16 +15,16 @@ export default function RaymondGlance() {
   return (
     <section
       id="glance"
-      className="section-pane relative isolate w-full overflow-hidden py-16"
+      className="section-pane relative isolate min-h-screen w-full overflow-hidden py-28"
     >
       <div className="pointer-events-none absolute inset-0 pattern-pinstripe-soft" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <Reveal>
-          <div className="eyebrow mb-2 text-navy/60">{glance.eyebrow}</div>
+          <div className="eyebrow mb-3 text-navy/60">{glance.eyebrow}</div>
         </Reveal>
 
-        <h2 className="font-serif text-[3.4rem] leading-[0.95] text-navy md:text-8xl lg:text-[8.5rem] font-extrabold tracking-[-0.02em]">
+        <h2 className="font-serif text-[2.6rem] leading-[1.02] text-navy md:text-7xl lg:text-[6rem]">
           <MaskText text={glance.title} />
         </h2>
 

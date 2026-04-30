@@ -9,16 +9,16 @@ export default function Catalyst() {
   return (
     <section
       id="catalyst"
-      className="section-pane relative isolate w-full overflow-hidden py-16"
+      className="section-pane relative isolate min-h-screen w-full overflow-hidden py-28"
     >
       <div className="pointer-events-none absolute inset-0 pattern-grid-fine opacity-50" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <Reveal>
-          <div className="eyebrow mb-2 text-navy/60">{catalyst.eyebrow}</div>
+          <div className="eyebrow mb-3 text-navy/60">{catalyst.eyebrow}</div>
         </Reveal>
 
-        <h2 className="mb-6 font-serif text-[3.4rem] leading-[0.95] text-navy md:text-8xl lg:text-[8.5rem] font-extrabold tracking-[-0.02em]">
+        <h2 className="mb-16 font-serif text-[2.6rem] leading-[1.02] text-navy md:text-7xl lg:text-[6rem]">
           <MaskText text="The Catalyst — The Technology That Changes Everything." />
         </h2>
 
@@ -40,14 +40,14 @@ export default function Catalyst() {
               <TiltCard className="h-full" intensity={8}>
                 <div
                   data-cursor="expand"
-                  className="group relative h-full overflow-hidden rounded-2xl bg-navy p-8 text-cream shadow-[0_40px_100px_-30px_rgba(10,31,61,0.6)] transition-all hover:shadow-[0_30px_80px_-15px_rgba(20,20,20,0.45)]"
+                  className="group relative h-full overflow-hidden rounded-2xl bg-navy p-8 text-cream shadow-[0_40px_100px_-30px_rgba(10,31,61,0.6)] transition-all hover:shadow-[0_30px_80px_-15px_rgba(45,212,224,0.45)]"
                 >
                   <motion.div
                     aria-hidden
                     className="pointer-events-none absolute -inset-1 opacity-0 transition-opacity group-hover:opacity-100"
                     style={{
                       background:
-                        "linear-gradient(115deg, transparent 35%, rgba(20,20,20,0.18) 50%, transparent 65%)",
+                        "linear-gradient(115deg, transparent 35%, rgba(45,212,224,0.18) 50%, transparent 65%)",
                     }}
                     animate={{ backgroundPosition: ["-100% 0%", "200% 0%"] }}
                     transition={{ duration: 2.4, repeat: Infinity, ease: "linear" }}
@@ -88,12 +88,12 @@ export default function Catalyst() {
 function PhoneScan() {
   return (
     <svg viewBox="0 0 200 100" className="h-full w-full">
-      <rect x="60" y="10" width="80" height="80" rx="6" fill="none" stroke="#141414" strokeWidth="1.4" />
+      <rect x="60" y="10" width="80" height="80" rx="6" fill="none" stroke="#2DD4E0" strokeWidth="1.4" />
       <motion.path
         d="M100 28 c -8 0 -8 12 0 12 c 8 0 8 -12 0 -12 z M88 50 h24 l-2 30 h-20 z"
-        fill="#141414"
+        fill="#2DD4E0"
         fillOpacity="0.18"
-        stroke="#141414"
+        stroke="#2DD4E0"
         strokeWidth="0.8"
         animate={{ opacity: [0.4, 1, 0.4] }}
         transition={{ duration: 3, repeat: Infinity }}
@@ -103,7 +103,7 @@ function PhoneScan() {
         y1="20"
         x2="136"
         y2="20"
-        stroke="#141414"
+        stroke="#2DD4E0"
         strokeWidth="0.8"
         animate={{ y1: [20, 78, 20], y2: [20, 78, 20] }}
         transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
@@ -139,7 +139,7 @@ function NeuralNet() {
                   y1={y}
                   x2={xs[i + 1]}
                   y2={y2}
-                  stroke="#141414"
+                  stroke="#2DD4E0"
                   strokeOpacity="0.45"
                   strokeWidth="0.6"
                   initial={{ pathLength: 0 }}
@@ -148,7 +148,7 @@ function NeuralNet() {
                   transition={{ duration: 1, delay: 0.3 + i * 0.15 + j * 0.05 }}
                 />
               ))}
-            <circle cx={xs[i]} cy={y} r="3" fill="#0A1F3D" stroke="#141414" strokeWidth="1" />
+            <circle cx={xs[i]} cy={y} r="3" fill="#0A1F3D" stroke="#2DD4E0" strokeWidth="1" />
           </g>
         ))
       )}
@@ -161,7 +161,7 @@ function DemandWave() {
     <svg viewBox="0 0 200 100" className="h-full w-full">
       <motion.path
         d="M0 70 Q 25 30 50 60 T 100 50 T 150 60 T 200 40"
-        stroke="#141414"
+        stroke="#2DD4E0"
         strokeWidth="1.5"
         fill="none"
         initial={{ pathLength: 0 }}
@@ -191,7 +191,7 @@ function DemandWave() {
           x={x}
           y={80}
           width="6"
-          fill="#141414"
+          fill="#2DD4E0"
           fillOpacity="0.25"
           initial={{ height: 0 }}
           whileInView={{ height: 12 + i * 4 }}
@@ -208,9 +208,9 @@ function FiberConnections() {
     <svg aria-hidden className="pointer-events-none absolute inset-0 hidden h-full w-full md:block">
       <defs>
         <linearGradient id="fiber" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stopColor="#141414" stopOpacity="0" />
-          <stop offset="50%" stopColor="#141414" stopOpacity="0.7" />
-          <stop offset="100%" stopColor="#141414" stopOpacity="0" />
+          <stop offset="0%" stopColor="#2DD4E0" stopOpacity="0" />
+          <stop offset="50%" stopColor="#2DD4E0" stopOpacity="0.7" />
+          <stop offset="100%" stopColor="#2DD4E0" stopOpacity="0" />
         </linearGradient>
       </defs>
       <motion.line

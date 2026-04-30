@@ -18,14 +18,14 @@ export default function MacroDisconnect() {
     <section
       ref={ref}
       id="macro"
-      className="section-pane relative isolate w-full overflow-hidden py-16"
+      className="section-pane relative isolate min-h-screen w-full overflow-hidden py-28"
     >
       <div className="relative mx-auto max-w-7xl px-6">
         <Reveal>
-          <div className="eyebrow mb-2 text-navy/60">{macro.eyebrow}</div>
+          <div className="eyebrow mb-3 text-navy/60">{macro.eyebrow}</div>
         </Reveal>
 
-        <h2 className="mb-20 font-serif text-[3.4rem] leading-[0.95] text-navy md:text-8xl lg:text-[8.5rem] font-extrabold tracking-[-0.02em]">
+        <h2 className="mb-20 font-serif text-[2.6rem] leading-[1.02] text-navy md:text-7xl lg:text-[6rem]">
           <MaskText text="The Macro Disconnect" />
         </h2>
 
