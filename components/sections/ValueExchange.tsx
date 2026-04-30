@@ -76,17 +76,17 @@ export default function ValueExchange() {
   return (
     <section
       id="exchange"
-      className="section-pane relative isolate min-h-screen w-full overflow-hidden py-28"
+      className="section-pane relative isolate w-full overflow-hidden py-16"
     >
       {/* rotating mandala bg */}
       <MandalaBg />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <Reveal>
-          <div className="eyebrow mb-3 text-navy/60">{exchange.eyebrow}</div>
+          <div className="eyebrow mb-2 text-navy/60">{exchange.eyebrow}</div>
         </Reveal>
 
-        <h2 className="mb-16 font-serif text-[2.6rem] leading-[1.02] text-navy md:text-7xl lg:text-[6rem]">
+        <h2 className="mb-6 font-serif text-[3.4rem] leading-[0.95] text-navy md:text-8xl lg:text-[8.5rem] font-extrabold tracking-[-0.02em]">
           <MaskText text="The Value Exchange — A Moat That Gets Deeper Every Day." />
         </h2>
 
@@ -281,7 +281,7 @@ function FlywheelArcs({
           key={i}
           data-arc
           d=""
-          stroke="#2DD4E0"
+          stroke="#141414"
           strokeWidth="0.5"
           fill="none"
           strokeLinecap="round"

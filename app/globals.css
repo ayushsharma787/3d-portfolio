@@ -9,9 +9,9 @@
   --gold: #c9a961;
   --gold-warm: #b89348;
   --gold-soft: #e2ce9c;
-  --cyan: #2dd4e0;
-  --cyan-light: #a8e6f0;
-  --cyan-deep: #0f8e9c;
+  --cyan: #141414;
+  --cyan-light: #9a9a9a;
+  --cyan-deep: #141414;
   --cream: #f5f1e8;
   --cream-warm: #efe9d8;
   --offwhite: #faf7ee;
@@ -223,7 +223,7 @@ html.lenis, html.lenis body { height: auto; }
 
 /* ================== Gloss / glow ================== */
 
-.cyan-glow { box-shadow: 0 0 28px rgba(45, 212, 224, 0.45); }
+.cyan-glow { box-shadow: 0 0 28px rgba(20, 20, 20, 0.25); }
 .gold-glow { box-shadow: 0 0 28px rgba(201, 169, 97, 0.35); }
 .gold-glow-sm { box-shadow: 0 0 14px rgba(201, 169, 97, 0.5); }
 

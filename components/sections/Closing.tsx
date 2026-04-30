@@ -24,7 +24,7 @@ export default function Closing() {
     <section
       ref={ref}
       id="closing"
-      className="relative isolate flex min-h-screen w-full items-center overflow-hidden py-28"
+      className="relative isolate flex w-full items-center overflow-hidden py-16"
     >
       {/* starfield + navy cloth */}
       <div className="absolute inset-0 bg-gradient-to-b from-navy/85 via-navy/80 to-navy-deep/90" />
@@ -105,9 +105,9 @@ function TapeMorphSvg({ morphT }: { morphT: MotionValue<number> }) {
           <stop offset="100%" stopColor="#E2CE9C" />
         </linearGradient>
         <linearGradient id="waveGrad" x1="0" y1="0" x2="1" y2="0">
-          <stop offset="0%" stopColor="#2DD4E0" stopOpacity="0" />
-          <stop offset="30%" stopColor="#2DD4E0" />
-          <stop offset="100%" stopColor="#2DD4E0" />
+          <stop offset="0%" stopColor="#141414" stopOpacity="0" />
+          <stop offset="30%" stopColor="#141414" />
+          <stop offset="100%" stopColor="#141414" />
         </linearGradient>
       </defs>
 
@@ -166,7 +166,7 @@ function TapeMorphSvg({ morphT }: { morphT: MotionValue<number> }) {
           key={i}
           cx={(i + 1) * (1200 / NODES)}
           cy={80 + Math.sin(i * 0.9) * 38}
-          r="4" fill="#2DD4E0"
+          r="4" fill="#141414"
           style={{ opacity: nodeOpacity }}
           initial={{ scale: 0 }}
           whileInView={{ scale: 1 }}
@@ -238,7 +238,7 @@ function FinalNetworkViz() {
               cy="100"
               r="10"
               fill="#0A1F3D"
-              stroke="#2DD4E0"
+              stroke="#141414"
               strokeWidth="1"
               initial={{ scale: 0 }}
               whileInView={{ scale: 1 }}
@@ -257,7 +257,7 @@ function FinalNetworkViz() {
                     y1="100"
                     x2={ex}
                     y2={ey}
-                    stroke="#2DD4E0"
+                    stroke="#141414"
                     strokeWidth="0.6"
                     strokeOpacity="0.55"
                     initial={{ pathLength: 0 }}

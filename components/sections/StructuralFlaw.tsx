@@ -57,17 +57,17 @@ export default function StructuralFlaw() {
     <section
       ref={ref}
       id="flaw"
-      className="section-pane relative isolate min-h-screen w-full overflow-hidden py-28"
+      className="section-pane relative isolate w-full overflow-hidden py-16"
     >
       {/* denim cross-hatch overlay */}
       <div className="pointer-events-none absolute inset-0 pattern-denim opacity-40" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <Reveal>
-          <div className="eyebrow mb-3 text-navy/60">{flaw.eyebrow}</div>
+          <div className="eyebrow mb-2 text-navy/60">{flaw.eyebrow}</div>
         </Reveal>
 
-        <h2 className="font-serif text-[2.6rem] leading-[1.02] text-navy md:text-7xl lg:text-[6rem]">
+        <h2 className="font-serif text-[3.4rem] leading-[0.95] text-navy md:text-8xl lg:text-[8.5rem] font-extrabold tracking-[-0.02em]">
           <MaskText text="The Structural Flaw — The Pipeline That Breaks at the Point of Sale." />
         </h2>
 
@@ -221,7 +221,7 @@ export default function StructuralFlaw() {
                   className="flex flex-col items-center justify-center gap-2 drift"
                   style={{ animationDelay: `${i * 0.4}s` }}
                 >
-                  <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-cyan/70 bg-cyan-light/20 text-cyan-deep shadow-[0_0_30px_-5px_rgba(45,212,224,0.4)]">
+                  <div className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-cyan/70 bg-cyan-light/20 text-cyan-deep shadow-[0_0_30px_-5px_rgba(20,20,20,0.4)]">
                     <PostIcon kind={p} />
                   </div>
                   <div className="text-xs font-semibold uppercase tracking-wide text-cyan-deep md:text-sm">

@@ -20,13 +20,13 @@ export default function ModelShift() {
     <section
       ref={ref}
       id="shift"
-      className="section-pane relative isolate min-h-screen w-full overflow-hidden py-28"
+      className="section-pane relative isolate w-full overflow-hidden py-16"
     >
       <div className="relative mx-auto max-w-7xl px-6">
         <Reveal>
-          <div className="eyebrow mb-3 text-navy/60">{shift.eyebrow}</div>
+          <div className="eyebrow mb-2 text-navy/60">{shift.eyebrow}</div>
         </Reveal>
-        <h2 className="mb-16 font-serif text-[2.6rem] leading-[1.02] text-navy md:text-7xl lg:text-[6rem]">
+        <h2 className="mb-6 font-serif text-[3.4rem] leading-[0.95] text-navy md:text-8xl lg:text-[8.5rem] font-extrabold tracking-[-0.02em]">
           <MaskText text="The Model Shift — Before vs. After." />
         </h2>
 
