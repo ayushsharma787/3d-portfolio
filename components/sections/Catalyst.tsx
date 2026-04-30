@@ -88,12 +88,12 @@ export default function Catalyst() {
 function PhoneScan() {
   return (
     <svg viewBox="0 0 200 100" className="h-full w-full">
-      <rect x="60" y="10" width="80" height="80" rx="6" fill="none" stroke="#141414" strokeWidth="1.4" />
+      <rect x="60" y="10" width="80" height="80" rx="6" fill="none" stroke="#F5F1E8" strokeWidth="1.4" />
       <motion.path
         d="M100 28 c -8 0 -8 12 0 12 c 8 0 8 -12 0 -12 z M88 50 h24 l-2 30 h-20 z"
-        fill="#141414"
-        fillOpacity="0.18"
-        stroke="#141414"
+        fill="#F5F1E8"
+        fillOpacity="0.25"
+        stroke="#F5F1E8"
         strokeWidth="0.8"
         animate={{ opacity: [0.4, 1, 0.4] }}
         transition={{ duration: 3, repeat: Infinity }}
@@ -103,8 +103,8 @@ function PhoneScan() {
         y1="20"
         x2="136"
         y2="20"
-        stroke="#141414"
-        strokeWidth="0.8"
+        stroke="#C9A961"
+        strokeWidth="1"
         animate={{ y1: [20, 78, 20], y2: [20, 78, 20] }}
         transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -139,8 +139,8 @@ function NeuralNet() {
                   y1={y}
                   x2={xs[i + 1]}
                   y2={y2}
-                  stroke="#141414"
-                  strokeOpacity="0.45"
+                  stroke="#F5F1E8"
+                  strokeOpacity="0.5"
                   strokeWidth="0.6"
                   initial={{ pathLength: 0 }}
                   whileInView={{ pathLength: 1 }}
@@ -148,7 +148,7 @@ function NeuralNet() {
                   transition={{ duration: 1, delay: 0.3 + i * 0.15 + j * 0.05 }}
                 />
               ))}
-            <circle cx={xs[i]} cy={y} r="3" fill="#0A1F3D" stroke="#141414" strokeWidth="1" />
+            <circle cx={xs[i]} cy={y} r="3" fill="#F5F1E8" stroke="#C9A961" strokeWidth="0.8" />
           </g>
         ))
       )}
@@ -161,7 +161,7 @@ function DemandWave() {
     <svg viewBox="0 0 200 100" className="h-full w-full">
       <motion.path
         d="M0 70 Q 25 30 50 60 T 100 50 T 150 60 T 200 40"
-        stroke="#141414"
+        stroke="#F5F1E8"
         strokeWidth="1.5"
         fill="none"
         initial={{ pathLength: 0 }}
@@ -191,8 +191,8 @@ function DemandWave() {
           x={x}
           y={80}
           width="6"
-          fill="#141414"
-          fillOpacity="0.25"
+          fill="#F5F1E8"
+          fillOpacity="0.3"
           initial={{ height: 0 }}
           whileInView={{ height: 12 + i * 4 }}
           viewport={{ once: true }}
