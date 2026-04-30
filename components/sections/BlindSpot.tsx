@@ -116,12 +116,12 @@ export default function BlindSpot() {
             transition={{ delay: 0.4, duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="absolute left-1/2 top-1/2 z-10 h-[28%] w-[28%] -translate-x-1/2 -translate-y-1/2"
           >
-            <div className="flex h-full w-full flex-col items-center justify-center rounded-full bg-navy text-cream shadow-[0_30px_80px_-20px_rgba(10,31,61,0.55)]">
-              <div className="text-[9px] font-bold uppercase tracking-[0.3em] text-gold">
+            <div className="flex h-full w-full flex-col items-center justify-center rounded-full bg-cream text-navy shadow-[0_30px_80px_-20px_rgba(10,31,61,0.55)] ring-2 ring-navy/20">
+              <div className="text-[9px] font-bold uppercase tracking-[0.3em] text-gold-warm">
                 Raymond
               </div>
               <div className="font-serif text-2xl font-bold md:text-3xl">Sees</div>
-              <div className="text-[9px] uppercase tracking-[0.25em] text-cream/70">
+              <div className="text-[9px] uppercase tracking-[0.25em] text-navy/50">
                 fabric only
               </div>
             </div>

@@ -130,8 +130,8 @@ export default function ValueExchange() {
               transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
               className="absolute left-1/2 top-1/2 h-[36%] w-[36%] -translate-x-1/2 -translate-y-1/2"
             >
-              <div className="flex h-full w-full items-center justify-center rounded-full bg-navy p-4 text-center text-cream shadow-[0_30px_80px_-20px_rgba(10,31,61,0.55)]">
-                <p className="font-serif text-xs italic leading-tight text-cream/95 md:text-sm">
+              <div className="flex h-full w-full items-center justify-center rounded-full bg-cream p-4 text-center text-navy shadow-[0_30px_80px_-20px_rgba(10,31,61,0.55)] ring-2 ring-navy/20">
+                <p className="font-serif text-xs italic leading-tight text-navy/90 md:text-sm">
                   {exchange.center}
                 </p>
               </div>
