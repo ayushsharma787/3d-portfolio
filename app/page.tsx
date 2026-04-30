@@ -29,6 +29,11 @@ import Defensibility from "@/components/sections/Defensibility";
 import MarketImpact from "@/components/sections/MarketImpact";
 import UnfairAdvantage from "@/components/sections/UnfairAdvantage";
 import Closing from "@/components/sections/Closing";
+import SmoothScroll from "@/components/ui/SmoothScroll";
+import StitchedRail from "@/components/ui/StitchedRail";
+import NeedleCursor from "@/components/ui/NeedleCursor";
+import ClothBackground from "@/components/ui/ClothBackground";
+import Preloader from "@/components/ui/Preloader";
 
 export default function Page() {
   useEffect(() => {
@@ -37,55 +42,28 @@ export default function Page() {
   }, []);
 
   return (
-    <SmoothScroll>
-      {/* The main tag now has 'cursor-none' to hide the default mouse 
-        and give full control to your CustomCursor 
-      */}
-      <main className="relative min-h-screen w-full cursor-none overflow-hidden bg-[#0a1f3d] selection:bg-[#c9a961] selection:text-[#0a1f3d]">
-        
-        {/* New 3D and Cursor Layers */}
-        <CustomCursor />
-        <FabricBackground />
+    <>
+      <Preloader />
+      <SmoothScroll />
+      <ClothBackground />
+      <StitchedRail />
+      <NeedleCursor />
 
-        {/* Your Original Scroll & Background Helpers */}
-        <ScrollBar />
-        <ScrollProgress />
-        <BackgroundStage
-          stops={[
-            "#F5F1E8", // hero
-            "#EFE9D8", // glance
-            "#F5F1E8", // macro
-            "#EFE9D8", // flaw
-            "#F5F1E8", // blindspot
-            "#EFE9D8", // dormant
-            "#F5F1E8", // catalyst
-            "#EFE9D8", // architecture
-            "#F5F1E8", // exchange
-            "#EFE9D8", // shift
-            "#F5F1E8", // defensibility
-            "#EFE9D8", // impact
-            "#F5F1E8", // advantage
-            "#0A1F3D", // closing
-          ]}
-        />
-
-        {/* The Website Narrative Flow */}
-        <div className="relative z-10 flex flex-col">
-          <Hero />
-          <RaymondGlance />
-          <MacroDisconnect />
-          <StructuralFlaw />
-          <BlindSpot />
-          <DormantAsset />
-          <Catalyst />
-          <NewArchitecture />
-          <ValueExchange />
-          <ModelShift />
-          <Defensibility />
-          <MarketImpact />
-          <UnfairAdvantage />
-          <Closing />
-        </div>
+      <main className="relative">
+        <Hero />
+        <RaymondGlance />
+        <MacroDisconnect />
+        <StructuralFlaw />
+        <BlindSpot />
+        <DormantAsset />
+        <Catalyst />
+        <NewArchitecture />
+        <ValueExchange />
+        <ModelShift />
+        <Defensibility />
+        <MarketImpact />
+        <UnfairAdvantage />
+        <Closing />
       </main>
     </SmoothScroll>
   );
