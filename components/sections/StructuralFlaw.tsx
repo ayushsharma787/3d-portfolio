@@ -59,7 +59,7 @@ export default function StructuralFlaw() {
     <section
       ref={ref}
       id="flaw"
-      className="relative isolate min-h-screen w-full overflow-hidden bg-[#fdf8ee] py-32 text-[#141414]"
+      className="relative isolate w-full overflow-hidden bg-[#fdf8ee] py-32 text-[#141414]"
     >
       {/* Giant ghost numeral parallax */}
       <motion.div

@@ -15,7 +15,7 @@ export default function UnfairAdvantage() {
   return (
     <section
       id="advantage"
-      className="section-pane relative isolate min-h-screen w-full overflow-hidden py-28"
+      className="section-pane relative isolate w-full overflow-hidden py-16"
     >
       {/* Two-tone fabric split */}
       <div className="pointer-events-none absolute inset-0 hidden md:block"
@@ -27,9 +27,9 @@ export default function UnfairAdvantage() {
 
       <div className="relative mx-auto max-w-7xl px-6">
         <Reveal>
-          <div className="eyebrow mb-3 text-navy/60">{advantage.eyebrow}</div>
+          <div className="eyebrow mb-2 text-navy/60">{advantage.eyebrow}</div>
         </Reveal>
-        <h2 className="mb-16 font-serif text-[2.6rem] leading-[1.02] text-navy md:text-7xl lg:text-[6rem]">
+        <h2 className="mb-6 font-serif text-[3.4rem] leading-[0.95] text-navy md:text-8xl lg:text-[8.5rem] font-extrabold tracking-[-0.02em]">
           <MaskText text="The Unfair Advantage — The Capital Cost of Catching Up." />
         </h2>
 

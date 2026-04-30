@@ -20,16 +20,16 @@ export default function NewArchitecture() {
   return (
     <section
       id="architecture"
-      className="section-pane relative isolate min-h-screen w-full overflow-hidden py-28"
+      className="section-pane relative isolate w-full overflow-hidden py-16"
     >
       <div className="pointer-events-none absolute inset-0 pattern-weave opacity-40" />
 
       <div className="relative mx-auto max-w-7xl px-6">
         <Reveal>
-          <div className="eyebrow mb-3 text-navy/60">{architecture.eyebrow}</div>
+          <div className="eyebrow mb-2 text-navy/60">{architecture.eyebrow}</div>
         </Reveal>
 
-        <h2 className="mb-4 font-serif text-[2.6rem] leading-[1.02] text-navy md:text-7xl lg:text-[6rem]">
+        <h2 className="mb-4 font-serif text-[3.4rem] leading-[0.95] text-navy md:text-8xl lg:text-[8.5rem] font-extrabold tracking-[-0.02em]">
           <MaskText text="The New Architecture." />
         </h2>
         <p className="mb-16 max-w-2xl text-base text-ink md:text-lg">
@@ -132,7 +132,7 @@ function DataFlows() {
           {/* inbound cyan packet */}
           <motion.circle
             r="1.6"
-            fill="#2DD4E0"
+            fill="#141414"
             animate={{ cy: [30, 70], opacity: [0, 1, 0] }}
             transition={{
               duration: 1.6,
